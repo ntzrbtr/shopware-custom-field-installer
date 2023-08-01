@@ -1,0 +1,21 @@
+{
+    "name": "ntzrbtr/shopware-custom-field-installer",
+    "description": "Custom field installer for Shopware 6",
+    "type": "symfony-bundle",
+    "require": {
+        "php": "^7.4.3 || ^8.1 || ^8.2",
+        "shopware/core": "^6.4 || ^6.5"
+    },
+    "license": "GPL-3.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "Netzarbeiter\\Shopware\\CustomFieldInstaller\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Thomas Off",
+            "email": "thomas.off@netzarbeiter.info"
+        }
+    ]
+}

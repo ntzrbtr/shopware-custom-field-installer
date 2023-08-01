@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:monolog="http://symfony.com/schema/dic/monolog"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd http://symfony.com/schema/dic/monolog http://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
+    <services>
+        <defaults autowire="true" autoconfigure="true" public="false"/>
+
+        <service id="Netzarbeiter\Shopware\CustomFieldInstaller\Service\CustomFieldService">
+            <argument type="service" id="custom_field_set.repository"/>
+        </service>
+
+        <service id="Netzarbeiter\Shopware\CustomFieldInstaller\Command\InstallCommand">
+            <tag name="console.command"/>
+        </service>
+        <service id="Netzarbeiter\Shopware\CustomFieldInstaller\Command\UninstallCommand">
+            <tag name="console.command"/>
+        </service>
+    </services>
+</container>
