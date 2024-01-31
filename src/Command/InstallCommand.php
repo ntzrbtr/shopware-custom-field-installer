@@ -42,13 +42,22 @@ class InstallCommand extends \Symfony\Component\Console\Command\Command
     protected SymfonyStyle $io;
 
     /**
+     * Custom field service
+     *
+     * @var CustomFieldService
+     */
+    protected CustomFieldService $customFieldService;
+
+    /**
      * InstallCommand constructor.
      *
      * @param CustomFieldService $customFieldService
      */
-    public function __construct(protected CustomFieldService $customFieldService)
+    public function __construct(CustomFieldService $customFieldService)
     {
         parent::__construct();
+
+        $this->customFieldService = $customFieldService;
 
         // Create context.
         $this->context = Context::createDefaultContext();

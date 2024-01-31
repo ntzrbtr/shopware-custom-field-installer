@@ -18,12 +18,20 @@ use Shopware\Core\System\CustomField\Aggregate\CustomFieldSet\CustomFieldSetEnti
 class CustomFieldService
 {
     /**
+     * Custom field set repository
+     *
+     * @var EntityRepository
+     */
+    protected EntityRepository $customFieldSetRepository;
+
+    /**
      * CustomFieldService constructor.
      *
      * @param EntityRepository $customFieldSetRepository
      */
-    public function __construct(protected EntityRepository $customFieldSetRepository)
+    public function __construct(EntityRepository $customFieldSetRepository)
     {
+        $this->customFieldSetRepository = $customFieldSetRepository;
     }
 
     /**
