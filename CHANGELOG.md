@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.3
+
+- Add compatibility with PHP 8.0
+
 ## v1.0.2
 
 - Fix compatibility issue with PHP 7.4
